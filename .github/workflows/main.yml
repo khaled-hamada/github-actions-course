@@ -16,3 +16,11 @@ jobs:
       - name: Print a welcome message
         run: echo "Welcome to our first github actions workflow"
       
+
+      - name: Checkout repo
+        uses: actions/checkout@v4.2.2
+      
+      - name: Print current branch
+        run: |
+          echo "Current branch is: ${{ github.ref }}"
+          ls -la
