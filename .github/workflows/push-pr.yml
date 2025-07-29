@@ -1,0 +1,28 @@
+name: Push code & Pull Request Workflow
+on:
+    push:
+        branches:
+            - main
+            - "release/**"
+            - "feature/**"
+        paths:
+            - ".github/workflows/push-pr.yml"
+            - ".github/workflows/main.yml"
+            - "src/**"
+            - "tests/**"
+    pull_request:
+        branches:
+            - main
+            - "release/**"
+            - "feature/**"
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: checkout code
+              uses: actions/checkout@v4.2.2
+            - name: run tests
+              run: npm test
+    
