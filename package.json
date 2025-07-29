@@ -1,0 +1,12 @@
+{
+  "name": "github-actions-ahmed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "bash src/test.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
