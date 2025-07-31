@@ -1,0 +1,13 @@
+name: Manula workflow
+on:
+    workflow_dispatch: # Allows manual triggering of the workflow
+
+jobs:
+    deploy-manually:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Deploy application
+              run: |
+                echo "This is a manual deployment task"
+                echo "Current date and time: $(date)"
+                # Add any additional commands you want to run here
