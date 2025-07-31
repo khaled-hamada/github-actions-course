@@ -30,4 +30,7 @@ jobs:
               run: |
                 echo "This is a manual deployment task"
                 echo "Current date and time: $(date)"
+                echo "Deploy message: ${{ inputs.deploy_message }}"
+                echo "Deployment environment: ${{ inputs.environment }}"
+                echo "Deployment confirmed: ${{ inputs.confirm_deploy }}"
                 # Add any additional commands you want to run here
