@@ -1,7 +1,27 @@
-name: Manula workflow
+name: Manual workflow
 on:
     workflow_dispatch: # Allows manual triggering of the workflow
-
+        inputs:
+            deploy_message:
+                description: 'Message for deployment'
+                required: true
+                default: 'Deploying application'
+            environment:
+                description: 'Deployment environment'
+                required: true
+                default: 'production'
+                type: choice
+                options:
+                    - production
+                    - staging
+                    - development
+            confirm_deploy:
+                description: 'Confirm deployment'
+                required: true
+                default: false
+                type: boolean
+             
+            
 jobs:
     deploy-manually:
         runs-on: ubuntu-latest
